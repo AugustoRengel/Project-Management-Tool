@@ -34,9 +34,10 @@
             this.btnNextPage = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.headerPanel = new System.Windows.Forms.Panel();
-            this.headerPanel.SuspendLayout();
+            this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.TopBarPanel = new System.Windows.Forms.Panel();
+            this.DividerBar = new System.Windows.Forms.Panel();
+            this.TopBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBoxPage
@@ -129,41 +130,51 @@
             this.txtBoxSearch.Size = new System.Drawing.Size(320, 23);
             this.txtBoxSearch.TabIndex = 0;
             // 
-            // flowLayoutPanel
+            // FlowLayoutPanel
             // 
-            this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 39);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(600, 361);
-            this.flowLayoutPanel.TabIndex = 4;
+            this.FlowLayoutPanel.AutoScroll = true;
+            this.FlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.FlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayoutPanel.Location = new System.Drawing.Point(0, 47);
+            this.FlowLayoutPanel.Name = "FlowLayoutPanel";
+            this.FlowLayoutPanel.Size = new System.Drawing.Size(600, 353);
+            this.FlowLayoutPanel.TabIndex = 4;
             // 
-            // headerPanel
+            // TopBarPanel
             // 
-            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.headerPanel.Controls.Add(this.txtBoxPage);
-            this.headerPanel.Controls.Add(this.lblTotalPages);
-            this.headerPanel.Controls.Add(this.btnPreviusPage);
-            this.headerPanel.Controls.Add(this.btnNextPage);
-            this.headerPanel.Controls.Add(this.btnSearch);
-            this.headerPanel.Controls.Add(this.txtBoxSearch);
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(0, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(600, 39);
-            this.headerPanel.TabIndex = 3;
+            this.TopBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.TopBarPanel.Controls.Add(this.txtBoxPage);
+            this.TopBarPanel.Controls.Add(this.lblTotalPages);
+            this.TopBarPanel.Controls.Add(this.btnPreviusPage);
+            this.TopBarPanel.Controls.Add(this.btnNextPage);
+            this.TopBarPanel.Controls.Add(this.btnSearch);
+            this.TopBarPanel.Controls.Add(this.txtBoxSearch);
+            this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopBarPanel.Name = "TopBarPanel";
+            this.TopBarPanel.Size = new System.Drawing.Size(600, 39);
+            this.TopBarPanel.TabIndex = 3;
+            // 
+            // DividerBar
+            // 
+            this.DividerBar.BackColor = System.Drawing.Color.Black;
+            this.DividerBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DividerBar.Location = new System.Drawing.Point(0, 39);
+            this.DividerBar.Name = "DividerBar";
+            this.DividerBar.Size = new System.Drawing.Size(600, 8);
+            this.DividerBar.TabIndex = 5;
             // 
             // ProjectsListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel);
-            this.Controls.Add(this.headerPanel);
+            this.Controls.Add(this.FlowLayoutPanel);
+            this.Controls.Add(this.DividerBar);
+            this.Controls.Add(this.TopBarPanel);
             this.Name = "ProjectsListUC";
             this.Size = new System.Drawing.Size(600, 400);
-            this.headerPanel.ResumeLayout(false);
-            this.headerPanel.PerformLayout();
+            this.TopBarPanel.ResumeLayout(false);
+            this.TopBarPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,7 +187,8 @@
         private System.Windows.Forms.Button btnNextPage;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtBoxSearch;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
+        private System.Windows.Forms.Panel TopBarPanel;
+        private System.Windows.Forms.Panel DividerBar;
     }
 }

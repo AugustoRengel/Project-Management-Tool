@@ -85,7 +85,7 @@ namespace Project_Management_Tool.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 51, 124")]
+        [global::System.Configuration.DefaultSettingValueAttribute("28, 130, 173")]
         public global::System.Drawing.Color PrimaryColor {
             get {
                 return ((global::System.Drawing.Color)(this["PrimaryColor"]));
@@ -97,7 +97,7 @@ namespace Project_Management_Tool.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("28, 130, 173")]
+        [global::System.Configuration.DefaultSettingValueAttribute("40, 187, 250")]
         public global::System.Drawing.Color SecondaryColor {
             get {
                 return ((global::System.Drawing.Color)(this["SecondaryColor"]));
@@ -152,6 +152,30 @@ namespace Project_Management_Tool.Properties {
             }
             set {
                 this["OnSurfaceLight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserName {
+            get {
+                return ((string)(this["UserName"]));
+            }
+            set {
+                this["UserName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserPassword {
+            get {
+                return ((string)(this["UserPassword"]));
+            }
+            set {
+                this["UserPassword"] = value;
             }
         }
     }

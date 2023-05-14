@@ -18,10 +18,10 @@
       <Value Profile="(Default)">235, 235, 235</Value>
     </Setting>
     <Setting Name="PrimaryColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">0, 51, 124</Value>
+      <Value Profile="(Default)">28, 130, 173</Value>
     </Setting>
     <Setting Name="SecondaryColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">28, 130, 173</Value>
+      <Value Profile="(Default)">40, 187, 250</Value>
     </Setting>
     <Setting Name="BackgroundLight" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">White</Value>
@@ -34,6 +34,12 @@
     </Setting>
     <Setting Name="OnSurfaceLight" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">18, 18, 18</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

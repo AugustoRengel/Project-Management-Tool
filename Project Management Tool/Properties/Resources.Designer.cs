@@ -63,6 +63,26 @@ namespace Project_Management_Tool.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_project_dark {
+            get {
+                object obj = ResourceManager.GetObject("add_project_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_project_light {
+            get {
+                object obj = ResourceManager.GetObject("add_project_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_wnd_dark {
             get {
                 object obj = ResourceManager.GetObject("close_wnd_dark", resourceCulture);
@@ -223,6 +243,16 @@ namespace Project_Management_Tool.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap moon_dark {
+            get {
+                object obj = ResourceManager.GetObject("moon_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap next_page_dark {
             get {
                 object obj = ResourceManager.GetObject("next_page_dark", resourceCulture);
@@ -316,6 +346,16 @@ namespace Project_Management_Tool.Properties {
         internal static System.Drawing.Bitmap search_light {
             get {
                 object obj = ResourceManager.GetObject("search_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sun_light {
+            get {
+                object obj = ResourceManager.GetObject("sun_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

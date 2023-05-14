@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Project.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +56,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="UserControlers\ConfigsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\ConfigsUC.Designer.cs">
+      <DependentUpon>ConfigsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlers\NewProjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlers\NewProjectUC.Designer.cs">
+      <DependentUpon>NewProjectUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlers\ProjectsListUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +87,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlers\ConfigsUC.resx">
+      <DependentUpon>ConfigsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlers\NewProjectUC.resx">
+      <DependentUpon>NewProjectUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlers\ProjectsListUC.resx">
       <DependentUpon>ProjectsListUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,7 +110,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
+    <None Include="Resources\sun_light.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear_dark.png" />
@@ -170,6 +189,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\document_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_project_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_project_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moon_dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

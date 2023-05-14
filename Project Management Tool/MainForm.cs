@@ -24,24 +24,27 @@ namespace Project_Management_Tool
         public MainForm()
         {
             InitializeComponent();
+            //Properties.Settings.Default.Reset();
             ApplyUiTheme();
             this.Padding = new Padding(borderSize);
+            if(Properties.Settings.Default.UserName == "")
+            {
+                btnConfigurations_Click(btnConfigurations, new EventArgs());
+            }
         }
 
-        private void ApplyUiTheme()
+        public void ApplyUiTheme()
         {
             if (Properties.Settings.Default.DarkMode)
             {
                 this.BackColor = Properties.Settings.Default.BackgroundDark;
                 MenuPanel.BackColor = Properties.Settings.Default.SurfaceContainerDark;
-                TopBarPanel.BackColor = Properties.Settings.Default.SurfaceContainerDark;
                 MainPanel.BackColor = Properties.Settings.Default.SurfaceContainerDark;
             }
             else
             {
                 this.BackColor = Properties.Settings.Default.BackgroundLight;
                 MenuPanel.BackColor = Properties.Settings.Default.SurfaceContainerLight;
-                TopBarPanel.BackColor = Properties.Settings.Default.SurfaceContainerLight;
                 MainPanel.BackColor = Properties.Settings.Default.SurfaceContainerLight;
             }
             foreach (Button menuBtn in this.Controls.OfType<Button>())
@@ -49,10 +52,6 @@ namespace Project_Management_Tool
                 ConfigButtonsTheme(menuBtn);
             }
             foreach (Button menuBtn in MenuPanel.Controls.OfType<Button>())
-            {
-                ConfigButtonsTheme(menuBtn);
-            }
-            foreach (Button menuBtn in TopBarPanel.Controls.OfType<Button>())
             {
                 ConfigButtonsTheme(menuBtn);
             }
@@ -82,6 +81,8 @@ namespace Project_Management_Tool
             btnAllProjects.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("search_folder_" + theme);
             btnMyProjects.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("document_" + theme);
             btnIdeas.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("light_on_" + theme);
+            btnNewProject.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("add_project_" + theme);
+            btnConfigurations.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("gear_" + theme);
         }
 
         private void ActivateButton(object btnSender)
@@ -92,7 +93,7 @@ namespace Project_Management_Tool
                 {
                     DisableButton();
                     activeButton = (Button)btnSender;
-                    activeButton.BackColor = Color.FromArgb(82, 5, 123);
+                    activeButton.BackColor = Properties.Settings.Default.PrimaryColor;
                 }
             }
         }
@@ -100,7 +101,7 @@ namespace Project_Management_Tool
         {
             if (activeButton != null)
             {
-                activeButton.BackColor = Color.FromArgb(21, 21, 21);
+                activeButton.BackColor = Color.Transparent;
             }
         }
 
@@ -122,11 +123,6 @@ namespace Project_Management_Tool
             if (MenuPanel.Width >= 200)
             {
                 MenuPanel.Width = 64;
-                TopBarPanel.Location = new Point(
-                    TopBarPanel.Location.X - 136,
-                    TopBarPanel.Location.Y
-                );
-                TopBarPanel.Width += 136;
                 MainPanel.Location = new Point(
                     MainPanel.Location.X - 136,
                     MainPanel.Location.Y
@@ -143,11 +139,6 @@ namespace Project_Management_Tool
             else
             {
                 MenuPanel.Width = 200;
-                TopBarPanel.Location = new Point(
-                    TopBarPanel.Location.X + 136,
-                    TopBarPanel.Location.Y
-                ); 
-                TopBarPanel.Width -= 136;
                 MainPanel.Location = new Point(
                     MainPanel.Location.X + 136,
                     MainPanel.Location.Y
@@ -169,7 +160,6 @@ namespace Project_Management_Tool
             closeUserControl();
             ProjectsListUC control = new ProjectsListUC();
             activeUserControl = control;
-            control.Dock = DockStyle.Fill;
             control.Width = MainPanel.Width;
             control.Height = MainPanel.Height;
             MainPanel.Controls.Add(control);
@@ -191,9 +181,12 @@ namespace Project_Management_Tool
         {
             ActivateButton(sender);
             closeUserControl();
-            Properties.Settings.Default.DarkMode = !Properties.Settings.Default.DarkMode;
-            Properties.Settings.Default.Save();
-            ApplyUiTheme();
+            ConfigsUC control = new ConfigsUC();
+            activeUserControl = control;
+            control.Width = MainPanel.Width;
+            control.Height = MainPanel.Height;
+            control.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(control);
         }
 
         #region Window basic functions 
@@ -319,5 +312,16 @@ namespace Project_Management_Tool
             base.WndProc(ref m);
         }
         #endregion
+
+        private void btnNewProject_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            closeUserControl();
+            NewProjectUC control = new NewProjectUC();
+            activeUserControl = control;
+            control.Width = MainPanel.Width;
+            control.Height = MainPanel.Height;
+            MainPanel.Controls.Add(control);
+        }
     }
 }
