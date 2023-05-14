@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_Management_Tool
+namespace Project_Management_Tool.UserControlers
 {
-    public partial class Form1 : Form
+    public partial class ProjectsListUC : UserControl
     {
-        public Form1()
+        public ProjectsListUC()
         {
             InitializeComponent();
         }

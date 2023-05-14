@@ -1,7 +1,39 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Project_Management_Tool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DarkMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BackgroundDark" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="SurfaceContainerDark" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">18, 18, 18</Value>
+    </Setting>
+    <Setting Name="SurfaceDark" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">24, 24, 24</Value>
+    </Setting>
+    <Setting Name="OnSurfaceDark" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">235, 235, 235</Value>
+    </Setting>
+    <Setting Name="PrimaryColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 51, 124</Value>
+    </Setting>
+    <Setting Name="SecondaryColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">28, 130, 173</Value>
+    </Setting>
+    <Setting Name="BackgroundLight" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="SurfaceContainerLight" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">235, 235, 235</Value>
+    </Setting>
+    <Setting Name="SurfaceLight" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">205, 205, 205</Value>
+    </Setting>
+    <Setting Name="OnSurfaceLight" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">18, 18, 18</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
